@@ -20,6 +20,18 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         CamMove();
+        MouseInput();
+    }
+    void MouseInput()
+    {
+        if(Input.GetMouseButton(0))
+        {
+            BuildManager.instance.BuildObject();
+        }
+        else if(Input.GetMouseButton(1))
+        {
+            BuildManager.instance.RemoveObject();
+        }
     }
     void CamMove()
     {
